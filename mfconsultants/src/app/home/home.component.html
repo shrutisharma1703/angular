@@ -1,0 +1,55 @@
+ <main role="main">
+
+      <!-- Main jumbotron for a primary marketing message or call to action -->
+      <div class="jumbotron">
+        <div class="container">
+          <h1>{{tagline | titlecase}} – India USA UK Canada</h1>
+          <p>A top MBA can open up the doors to fantastic professional opportunities. While everyone wants to get into the best MBA programs like Harvard Business School, Stanford and Wharton, the ground realities are different. For a top ranking full-time MBA program or an executive MBA, the cut-throat global competition coupled with the complicated MBA application process can be stumbling blocks even for the strongest MBA applicants.</p>
+          <p><a class="btn btn-primary btn-lg" routerLink="about" role="button">Learn more &raquo;</a></p>
+        </div>
+      </div>
+
+      <div class="container">
+        <!-- Example row of columns -->
+        <div class="row">
+          <div class="col-md-12">
+            <h2><span><i class="icon-eye"></i></span> Admission Details </h2>
+            <p>Admissions starts from {{today | date}} or {{today | date:'fullDate'}}</p>
+			<p>Courses available {{courses| uppercase}}</p>
+			Fees starts from<ul>
+				<li *ngFor="let i of CourseDeatil">
+					<a class="nav-link" >{{ i.name | uppercase }} {{i.price | currency}} </a>			
+				</li>
+			</ul>
+          </div>
+         
+        </div>
+
+        <hr>
+
+      </div>
+	  <div class="container">
+        <!-- Example row of columns -->
+        <div class="row">
+          <div class="col-md-4">
+            <h2><span><i class="icon-eye"></i></span> Why we exist</h2>
+            <p>Our vision is to create an ecosystem of resources &amp; services that will help many deserving applicants get access to the opportunities that currently seem out of reach. </p>
+            <p></p>
+          </div>
+          <div class="col-md-4">
+            <h2><span><i class="icon-lamp"></i></span> Why the funny name?</h2>
+            <p>Our flagship product allows applicants to <em>gaze into the future</em> and take corrective actions in the present. </p>
+            <p></p>
+          </div>
+          <div class="col-md-4">
+            <h2><span><i class="icon-users"></i></span> Our MBA Consultants</h2>
+            <p>The pedigree of any advisory team can be judged by the calibre of its consultants. Our MBA admissions consultants have brands like Stanford, McKinsey &amp; Cambridge on their resumes.</p>
+            <p></p>
+          </div>
+        </div>
+
+        <hr>
+
+      </div>
+
+    </main>
